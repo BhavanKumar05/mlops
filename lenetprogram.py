@@ -39,7 +39,7 @@ y_test = np_utils.to_categorical(y_test)
 num_classes = y_test.shape[1]
 num_pixels = x_train.shape[1] * x_train.shape[2]
 
-input_file = open('/root/mlops/input.txt','r')
+input_file = open('/mlops/input.txt','r')
 inputs = input_file.read()
 inputs = inputs.split('\n')
 convolve_layers = int(inputs[0])
@@ -113,12 +113,12 @@ print('Test loss:', scores[0])
 print('Test accuracy:', scores[1])
 
 
-accuracy_file = open('/root/mlops/accuracy.txt.txt','w')
+accuracy_file = open('/mlops/accuracy.txt.txt','w')
 accuracy_file.write( str(scores[1]))
 accuracy_file.close()
 
 
-data_file = open('root/mlops/data.txt','w')
+data_file = open('/mlops/data.txt','w')
 data_file.write(str(convolve_layers))
 data_file.write('\n')
 data_file.write(str(nfilter))
@@ -138,7 +138,7 @@ data_file.close()
 
 
 
-display_file = open('/root/mlops/data_per_layer.html','r+')
+display_file = open('/mlops/data_per_layer.html','r+')
 display_file.read()
 display_file.write('<pre>\n*************************************************\n')
 display_file.write(data)
