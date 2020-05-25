@@ -1,6 +1,6 @@
-accuracy_file = open('accuracy.txt.txt','r')
-input_file = open('input.txt','r')
-data_file = open('data.txt','r')
+accuracy_file = open('/mlops/accuracy.txt.txt','r')
+input_file = open('/mlops/input.txt','r')
+data_file = open('/mlops/data.txt','r')
 
 
 
@@ -36,7 +36,7 @@ if( new_accuracy < 98.5 ):
 data_file.close()
 input_file.close()
 
-input_file = open('input.txt','w')
+input_file = open('/mlops/input.txt','w')
 input_file.write(str(convolve_layers ))
 input_file.write('\n')
 input_file.write(str(no_of_filters))
