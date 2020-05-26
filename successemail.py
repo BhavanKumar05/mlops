@@ -27,7 +27,7 @@ msg.attach(MIMEText(body, 'plain'))
   
 # open the file to be sent  
 filename = "input.txt"
-attachment = open('/mlops/input.txt', 'rb') 
+attachment = open('/root/mlops/input.txt', 'rb') 
   
 # instance of MIMEBase and named as p 
 p = MIMEBase('application', 'octet-stream') 
